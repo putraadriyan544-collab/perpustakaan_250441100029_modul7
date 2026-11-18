@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="auth-box">
-    <h2>Masuk ke Akun</h2>
+    <h2>Masuk ke Akun - 250441100029</h2>
     <p class="subtitle">Silakan masukkan email dan kata sandi Anda</p>
 
     @if ($errors->any())
