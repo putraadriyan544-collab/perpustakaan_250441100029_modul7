@@ -4,7 +4,7 @@
 
 @section('content')
 <div>
-    <h2 class="judul-halaman">Laporan & Rekapitulasi Perpustakaan</h2>
+    <h2 class="judul-halaman">Laporan & Rekapitulasi Perpustakaan 250441100029</h2>
     <p class="subjudul">Statistik sirkulasi peminjaman, persebaran kategori, dan buku terpopuler di perpustakaan digital.</p>
 
     <!-- Ringkasan Statistik -->
@@ -41,16 +41,16 @@
                     </thead>
                     <tbody>
                         @forelse ($kategoriRekap as $kat)
-                            <tr>
-                                <td><strong>{{ $kat->nama }}</strong></td>
-                                <td style="text-align: right;">
-                                    <span class="badge">{{ $kat->bukus_count }} Judul</span>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td><strong>{{ $kat->nama }}</strong></td>
+                            <td style="text-align: right;">
+                                <span class="badge">{{ $kat->bukus_count }} Judul</span>
+                            </td>
+                        </tr>
                         @empty
-                            <tr>
-                                <td colspan="2" style="text-align: center; padding: 16px;">Belum ada kategori terdata.</td>
-                            </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center; padding: 16px;">Belum ada kategori terdata.</td>
+                        </tr>
                         @endforelse
                     </tbody>
                 </table>
@@ -71,17 +71,17 @@
                     </thead>
                     <tbody>
                         @forelse ($bukuPopuler as $b)
-                            <tr>
-                                <td><strong>{{ $b->judul }}</strong></td>
-                                <td>{{ $b->kategori->nama ?? '-' }}</td>
-                                <td style="text-align: right;">
-                                    <span class="badge badge-success">{{ $b->peminjamans_count }} kali</span>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td><strong>{{ $b->judul }}</strong></td>
+                            <td>{{ $b->kategori->nama ?? '-' }}</td>
+                            <td style="text-align: right;">
+                                <span class="badge badge-success">{{ $b->peminjamans_count }} kali</span>
+                            </td>
+                        </tr>
                         @empty
-                            <tr>
-                                <td colspan="3" style="text-align: center; padding: 16px;">Belum ada peminjaman buku.</td>
-                            </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: center; padding: 16px;">Belum ada peminjaman buku.</td>
+                        </tr>
                         @endforelse
                     </tbody>
                 </table>
@@ -90,4 +90,3 @@
     </div>
 </div>
 @endsection
-
